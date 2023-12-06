@@ -1,0 +1,14 @@
+sudo apt install docker.io
+
+sudo systemctl status docker
+$ echo $USER
+sudo docker run -d --name=rancher-server --restart=unless-stopped -p 80:80 -p 443:443 --privileged rancher/rancher:latest 
+docker run -d --restart=unless-stopped \ -p 80:80 -p 443:443 \ -v /:/container/certs \ -e SSL_CERT_DIR="/container/certs" \ --privileged \ rancher/rancher:latest
+
+sudo usermod -aG docker $USER
+
+sudo systemctl enable docker
+
+rancher clusturs oluştur
+
+longhorn kur
